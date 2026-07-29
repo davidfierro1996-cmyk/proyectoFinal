@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">Euro Trader<span>FX</span></a>
+            <nav class="main-nav">
+
+            <hr>    
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="markets.html" class="active">Mercados</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <link rel="stylesheet" href="estilos.css">
+                </ul>
+            </nav>
+
+            <hr>
+            <div class="theme-selector">
+                <button onclick="setTheme('emerald')" class="theme-btn active" id="btn-emerald">Verde</button>
+                <button onclick="setTheme('blue')" class="theme-btn" id="btn-blue">Azul</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container page-content">
+        <section class="portfolio-summary">
+            <div class="summary-card">
+                <span class="summary-label">Balance Disponible</span>
+                <h2 id="balance-display">$10,000.00 USD</h2>
+            </div>
+            <div class="summary-card">
+                <span class="summary-label">Valor del Portafolio</span>
+                <h2 id="portfolio-display">$0.00 USD</h2>
+            </div>
+        </section>
+
+        <section class="market-section">
+            <div class="market-table-container">
+                <table class="market-table">
+                    <thead>
+                        <tr>
+                            <th>Activo</th>
+                            <th>Precio</th>
+                            <th>Cambio (24h)</th>
+                            <th>Acciones de Simulación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-asset="sp500">
+                            <td><strong>S&P 500</strong> Index</td>
+                            <td class="price-cell">$5,120.30</td>
+                            <td class="trend up">+1.24%</td>
+                            <td>
+                                <button class="btn-trade buy" onclick="tradeAsset('sp500', 5120.30, 'buy')">Comprar 1</button>
+                                <button class="btn-trade sell" onclick="tradeAsset('sp500', 5120.30, 'sell')">Vender 1</button>
+                            </td>
+                        </tr>
+                        <tr data-asset="btc">
+                            <td><strong>Bitcoin</strong> BTC</td>
+                            <td class="price-cell">$64,250.00</td>
+                            <td class="trend down">-0.85%</td>
+                            <td>
+                                <button class="btn-trade buy" onclick="tradeAsset('btc', 64250.00, 'buy')">Comprar 1</button>
+                                <button class="btn-trade sell" onclick="tradeAsset('btc', 64250.00, 'sell')">Vender 1</button>
+                            </td>
+                        </tr>
+                        <tr data-asset="Etherium">
+                            <td><strong>Etherium</strong> Etherium</td>
+                            <td class="price-cell">$1,850,70</td>
+                            <td class="trend down">-3.90%</td>
+                            <td>
+                                <button class="btn-trade buy" onclick="tradeAsset('btc', 64250.00, 'buy')">Comprar 1</button>
+                                <button class="btn-trade sell" onclick="tradeAsset('btc', 64250.00, 'sell')">Vender 1</button>
+                            </td>
+                        </tr>
+                        <tr data-asset="Tether USDT">
+                            <td><strong>Tether USDT</strong> Tether USDT</td>
+                            <td class="price-cell">$0,9999</td>
+                            <td class="trend down">-0,03%</td>
+                            <td>
+                                <button class="btn-trade buy" onclick="tradeAsset('btc', 64250.00, 'buy')">Comprar 1</button>
+                                <button class="btn-trade sell" onclick="tradeAsset('btc', 64250.00, 'sell')">Vender 1</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="activity-log-section">
+            <h3>Historial de Operaciones</h3>
+            <div class="log-container" id="log-container">
+                <p class="empty-log">Aún no has realizado operaciones de simulación.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Euro traderFX Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>
