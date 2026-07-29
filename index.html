@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Euro Trader FX - Inicio</title>
+    <title>Euro Trader FX - Bienvenido</title>
     
-    <!-- Hoja de estilos vinculada correctamente en el head -->
+    <!-- Fuentes Google Inter y FontAwesome para Iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Hoja de estilos -->
     <link rel="stylesheet" href="estilos.css">
 </head>
-<body>
+<body class="theme-emerald">
 
-    <!-- ENCABEZADO -->
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
     <header class="main-header">
         <div class="container navbar">
-            <h1>Euro Trader<span>FX</span></h1>
+            <a href="index.html" class="logo">
+                Euro Trader<span>FX</span>
+            </a>
+            
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html" class="active">Inicio</a></li>
@@ -21,49 +30,158 @@
                     <li><a href="nosotros.html">Nosotros</a></li>
                 </ul>
             </nav>
-            <a href="#" class="btn btn-primary">Comenzar</a>
+
+            <!-- Selector de Tema (Emerald / Blue) -->
+            <div class="theme-selector">
+                <button class="theme-btn active" id="btn-emerald" onclick="document.body.className='theme-emerald'">Emerald</button>
+                <button class="theme-btn" id="btn-blue" onclick="document.body.className='theme-blue'">Blue</button>
+            </div>
         </div>
     </header>
 
     <!-- CONTENIDO PRINCIPAL -->
-    <main>
-        <!-- Sección Hero -->
-        <section class="hero container">
-            <div class="hero-content">
-                <h1>El futuro de tus inversiones comienza hoy</h1>
-                <p>Accede a mercados globales, gestiona tu portafolio en tiempo real y haz crecer tu patrimonio con la tecnología financiera más avanzada.</p>
-                <div class="hero-buttons">
-                    <a href="markets.html" class="btn btn-primary">Ver Mercados</a>
-                    <a href="nosotros.html" class="btn btn-secondary">Saber Más</a>
+    <main class="page-content container">
+        
+        <!-- SECCIÓN 1: BIENVENIDA Y QUÉ ES LA PÁGINA -->
+        <section class="summary-card hero-welcome" style="margin-bottom: 2rem; text-align: center; padding: 3rem 2rem;">
+            <span class="summary-label" style="letter-spacing: 1.5px;"><i class="fa-solid fa-chart-line"></i> Plataforma Educativa & Simulator Trading</span>
+            <h1 style="font-size: 2.8rem; margin: 1rem 0; color: var(--text-main);">Tu Puerta de Entrada al Mundo de las Inversiones</h1>
+            <p style="color: var(--text-muted); max-width: 800px; margin: 0 auto 2rem auto; line-height: 1.6;">
+                <strong>Euro Trader FX</strong> es un entorno diseñado para que consultes cotizaciones en tiempo real, operes en el mercado de divisas y criptomonedas, y aprendas a gestionar tu capital con herramientas financieras profesionales.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="markets.html" class="btn-trade buy" style="padding: 0.8rem 1.8rem; font-size: 1rem; text-decoration: none;">
+                    Explorar Mercados <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#como-usar" class="btn-trade sell" style="padding: 0.8rem 1.8rem; font-size: 1rem; text-decoration: none;">
+                    ¿Cómo Usar la Plataforma?
+                </a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: ¿QUÉ SON LAS INVERSIONES Y CÓMO FUNCIONAN? -->
+        <section class="market-section" style="padding: 2rem; margin-bottom: 2.5rem;">
+            <h2 style="font-size: 1.8rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.8rem;">
+                <i class="fa-solid fa-wallet" style="color: var(--accent-color);"></i> ¿Qué son las Inversiones Financieras?
+            </h2>
+            <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+                Invertir consiste en colocar tu dinero en activos financieros (como divisas, acciones o criptomonedas) con el objetivo de generar una rentabilidad a lo largo del tiempo. En lugar de mantener el dinero estático, buscas aprovechar la fluctuación de los precios en el mercado global.
+            </p>
+
+            <div class="portfolio-summary" style="margin-bottom: 0;">
+                <div class="summary-card">
+                    <h3 style="color: var(--accent-color); font-size: 1.2rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-money-bill-transfer"></i> Divisas (Forex)</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">El mercado más grande del mundo. Consiste en la compra y venta simultánea de monedas globales como el EUR/USD o USD/JPY.</p>
+                </div>
+                <div class="summary-card">
+                    <h3 style="color: var(--accent-color); font-size: 1.2rem; margin-bottom: 0.5rem;"><i class="fa-brands fa-bitcoin"></i> Criptomonedas</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">Activos digitales descentralizados como Bitcoin que operan las 24 horas del día con alto potencial de variabilidad de precio.</p>
+                </div>
+                <div class="summary-card">
+                    <h3 style="color: var(--accent-color); font-size: 1.2rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-shield-halved"></i> Gestión de Riesgo</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">Toda inversión conlleva riesgos. Diversificar activos y controlar la toma de pérdidas es la clave para mantener un capital constante.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Sección de Características -->
-        <section class="features container">
-            <div class="card">
-                <h3>Seguridad Avanzada</h3>
-                <p>Tus fondos y datos están protegidos bajo los más altos estándares de encriptación militar.</p>
-            </div>
-            <div class="card">
-                <h3>Bajas Comisiones</h3>
-                <p>Maximizamos tus retornos reduciendo los costos operativos al mínimo posible.</p>
-            </div>
-            <div class="card">
-                <h3>Soporte 24/7</h3>
-                <p>Un equipo de expertos financieros listo para ayudarte en cualquier momento del día.</p>
+        <!-- SECCIÓN 3: ¿CÓMO USAR ESTA PÁGINA? (PASO A PASO) -->
+        <section id="como-usar" class="activity-log-section" style="margin-bottom: 2.5rem; padding: 2rem;">
+            <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem;">
+                <i class="fa-solid fa-circle-play" style="color: var(--accent-color);"></i> ¿Cómo usar Euro Trader FX?
+            </h2>
+
+            <div class="log-container" style="max-height: none; gap: 1.2rem;">
+                <div class="log-item buy" style="padding: 1.2rem;">
+                    <div>
+                        <strong style="color: var(--text-main); font-size: 1.1rem;">Paso 1: Monitorea el Resumen del Portafolio</strong>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.3rem;">
+                            En la pestaña principal verás tu saldo total disponible, tus ganancias brutas en 24h y las órdenes de compra o venta abiertas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="log-item buy" style="padding: 1.2rem;">
+                    <div>
+                        <strong style="color: var(--text-main); font-size: 1.1rem;">Paso 2: Analiza la Tabla de Mercados en Vivo</strong>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.3rem;">
+                            Revisa el precio actual y el cambio porcentual. Los destellos en verde <span class="trend up">(+%)</span> o rojo <span class="trend down">(-%)</span> representan fluctuaciones en tiempo real.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="log-item buy" style="padding: 1.2rem;">
+                    <div>
+                        <strong style="color: var(--text-main); font-size: 1.1rem;">Paso 3: Ejecuta Operaciones de Trading</strong>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.3rem;">
+                            Usa los botones <span class="btn-trade buy" style="padding: 2px 6px; font-size: 0.8rem;">Comprar</span> si prevés que el activo subirá, o <span class="btn-trade sell" style="padding: 2px 6px; font-size: 0.8rem;">Vender</span> si proyectas una baja en su valor.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="log-item buy" style="padding: 1.2rem;">
+                    <div>
+                        <strong style="color: var(--text-main); font-size: 1.1rem;">Paso 4: Consulta el Historial de Actividad</strong>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.3rem;">
+                            Cada orden que envíes se registrará inmediatamente en el historial con el tipo de operación, volumen negociado y rendimiento.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <!-- SECCIÓN 4: VISTA PREVIA DE MERCADOS -->
+        <section class="market-section">
+            <div style="padding: 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <h3 style="font-size: 1.3rem;">Muestrario de Mercado en Tiempo Real</h3>
+                <a href="markets.html" class="trend up" style="text-decoration: none; font-size: 0.9rem;">Ver Lista Completa <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+
+            <div class="market-table-container">
+                <table class="market-table">
+                    <thead>
+                        <tr>
+                            <th>Par / Activo</th>
+                            <th>Precio</th>
+                            <th>Cambio (24h)</th>
+                            <th>Acciones Rápidas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>EUR/USD</strong></td>
+                            <td class="flash-up">$1.0845</td>
+                            <td class="trend up">+0.42%</td>
+                            <td>
+                                <button class="btn-trade buy">Comprar</button>
+                                <button class="btn-trade sell">Vender</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>BTC/USD</strong></td>
+                            <td class="flash-up">$64,320.00</td>
+                            <td class="trend up">+3.12%</td>
+                            <td>
+                                <button class="btn-trade buy">Comprar</button>
+                                <button class="btn-trade sell">Vender</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
     </main>
 
     <!-- PIE DE PÁGINA -->
     <footer class="main-footer">
         <div class="container footer-content">
-            <p>&copy; 2026 Inversa S.A. Todos los derechos reservados.</p>
-            <p>Las inversiones conllevan riesgos de pérdida de capital.</p>
+            <p>&copy; 2026 Euro Trader FX / Inversa S.A. Todos los derechos reservados.</p>
+            <p>Las inversiones en divisas y CFDs conllevan un alto nivel de riesgo para su capital.</p>
         </div>
     </footer>
-      <script scr="script.js "> </script>
+
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 </html>
