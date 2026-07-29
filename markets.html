@@ -10,14 +10,17 @@
         <div class="container navbar">
             <a href="index.html" class="logo">Euro Trader<span>FX</span></a>
             <nav class="main-nav">
+
+            <hr>    
                 <ul>
-                    <li><a href="euroTrader.html">Inicio</a></li>
+                    <li><a href="index.html">Inicio</a></li>
                     <li><a href="markets.html" class="active">Mercados</a></li>
                     <li><a href="nosotros.html">Nosotros</a></li>
-                    <link rel="stylesheet" href="euroTraeder.css">
+                    <link rel="stylesheet" href="estilos.css">
                 </ul>
             </nav>
-            <!-- Selector de Tema Interactivo -->
+
+            <hr>
             <div class="theme-selector">
                 <button onclick="setTheme('emerald')" class="theme-btn active" id="btn-emerald">Verde</button>
                 <button onclick="setTheme('blue')" class="theme-btn" id="btn-blue">Azul</button>
@@ -67,7 +70,7 @@
                                 <button class="btn-trade sell" onclick="tradeAsset('btc', 64250.00, 'sell')">Vender 1</button>
                             </td>
                         </tr>
-                         <tr data-asset="Etherium">
+                        <tr data-asset="Etherium">
                             <td><strong>Etherium</strong> Etherium</td>
                             <td class="price-cell">$1,850,70</td>
                             <td class="trend down">-3.90%</td>
@@ -100,11 +103,10 @@
 
     <footer class="main-footer">
         <div class="container footer-content">
-            <p>&copy; 2026 Inversa S.A. Todos los derechos reservados.</p>
+            <p>&copy; 2026 Euro traderFX Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- Script de Interactividad -->
-    <script src="app.js"></script> 
+    <script src="script.js"></script> 
 </body>
 </html>
