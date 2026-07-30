@@ -65,4 +65,26 @@ function tradeAsset(nombreActivo, precioActivo, tipoOperacion) {
 
         contenedorHistorial.prepend(nuevoLog);
     }
+
+    // Manejo del formulario de contacto en nosotros.html
+document.addEventListener("DOMContentLoaded", function() {
+    let contactForm = document.getElementById("contact-form");
+    
+    if (contactForm) {
+        contactForm.addEventListener("submit", function(e) {
+            e.preventDefault(); // Previene que la página se recargue
+            
+            let nombre = document.getElementById("nombre").value;
+            let responseBox = document.getElementById("form-response");
+            
+            if (responseBox) {
+                responseBox.className = "form-response success";
+                responseBox.innerHTML = `<i class="fa-solid fa-circle-check"></i> ¡Gracias, <strong>${nombre}</strong>! Tu mensaje ha sido enviado correctamente.`;
+                
+                // Limpiar el formulario
+                contactForm.reset();
+            }
+        });
+    }
+});
 }

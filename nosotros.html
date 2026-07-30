@@ -104,6 +104,47 @@
 
     </main>
 
+      <!-- SECCIÓN DE CONTACTO / CONSULTAS -->
+<section class="section-padding summary-card">
+    <h2 class="section-title"><i class="fa-solid fa-paper-plane icon-accent"></i> Contáctanos</h2>
+    <p class="section-description">
+        ¿Tienes alguna duda sobre la plataforma o te interesa colaborar con el equipo de desarrollo? Envíanos un mensaje.
+    </p>
+
+    <form id="contact-form" class="contact-form">
+        <div class="form-group">
+            <label for="nombre" class="form-label">Nombre Completo</label>
+            <input type="text" id="nombre" class="form-input" placeholder="Ej. Gael Jerez" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email" class="form-label">Correo Electrónico</label>
+            <input type="email" id="email" class="form-input" placeholder="correo@ejemplo.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="asunto" class="form-label">Asunto</label>
+            <select id="asunto" class="form-input">
+                <option value="consulta">Consulta General</option>
+                <option value="soporte">Soporte Técnico</option>
+                <option value="propuesta">Propuesta de Proyecto</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea id="mensaje" class="form-input form-textarea" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        </div>
+
+        <button type="submit" class="theme-btn active btn-submit">
+            <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje
+        </button>
+    </form>
+    
+    <!-- Mensaje de confirmación -->
+    <div id="form-response" class="form-response"></div>
+</section>
+
     <!-- FOOTER -->
     <footer class="main-footer">
         <div class="container footer-content">

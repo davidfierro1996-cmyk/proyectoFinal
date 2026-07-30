@@ -471,6 +471,79 @@ body {
 }
 
 /* ==========================================
+   FORMULARIO DE CONTACTO (NOSOTROS)
+   ========================================== */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 650px;
+    margin-top: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-label {
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.form-input {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-family: var(--font-family);
+    font-size: 0.95rem;
+    transition: var(--transition);
+    outline: none;
+}
+
+.form-input:focus {
+    border-color: var(--accent-color);
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.form-input option {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+}
+
+.form-textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    align-self: flex-start;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+}
+
+.form-response {
+    margin-top: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    display: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.form-response.success {
+    display: block;
+    background-color: rgba(0, 230, 118, 0.15);
+    color: var(--up-color);
+    border: 1px solid var(--up-color);
+}
+
+/* ==========================================
    FOOTER Y RESPONSIVE
    ========================================== */
 .main-footer {
