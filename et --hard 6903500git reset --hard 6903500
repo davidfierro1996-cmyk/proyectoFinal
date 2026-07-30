@@ -1,0 +1,25 @@
+[33m62c4afa[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Resueltos conflictos de merge con dev_gael
+[33m736004f[m feature: se agrego un fromulario a la pagina
+[33m6903500[m fix: alineacion de botones inline en index y seccion de contacto en nosotros
+[33ma600587[m feat: formulario de contacto agregado a página nosotros
+[33m471c9dd[m refactor: optimización de estilos.css y limpieza total de HTML
+[33md043b15[m refactor: limpieza de estilos inline en index y nosotros, agregados estilos en CSS
+[33m85a2389[m fix: correccion de botones de trading, divisas y scripts de simulacion
+[33md9666f2[m docs: actualizacion de integrantes y roles del proyecto
+[33mecc8347[m fix: index
+[33m70215a9[m Merge branch 'main' of https://github.com/davidfierro1996-cmyk/proyectoFinal
+[33m2601d51[m fix: se cambio a index.html
+[33mb14ebb4[m feature: se cambio el href a index
+[33mebe5814[m Merge branch 'dev_alexis'
+[33mc6b499b[m Merge remote-tracking branch 'origin/dev_andres'
+[33m18e1923[m[33m ([m[1;31morigin/dev_andres[m[33m)[m feature: Se creo el archivo script.js
+[33m641ab06[m[33m ([m[1;31morigin/dev_alexis[m[33m)[m feature: se agregaron cambios al css
+[33mf931f12[m[33m ([m[1;31morigin/dev_gael[m[33m, [m[1;32mdev_gael[m[33m)[m feature se agrego scr=script.j
+[33m36d7b0d[m feature: Se creo el archivo script.js
+[33m539bfdf[m feature: se agrego <link rel=stylesheet href=estilos.css>
+[33m5cdcf31[m feat: implementar estructura HTML limpia para index y nosotros
+[33ma611585[m feature: creacion nosotros.html
+[33m0c59f08[m feature: se crean los estilos
+[33mcf1a396[m feature: se crea la pagina makets
+[33m1055204[m feature: creacion index.html
+[33mae95196[m Initial commit
