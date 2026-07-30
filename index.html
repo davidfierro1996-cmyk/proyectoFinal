@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Euro Trader FX - Bienvenido</title>
     
-    <!-- Fuentes Google Inter y FontAwesome para Iconos -->
+    <!-- Fuentes e Iconos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
 </head>
 <body class="theme-emerald">
 
-    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <!-- ENCABEZADO -->
     <header class="main-header">
         <div class="container navbar">
             <a href="index.html" class="logo">
@@ -31,10 +31,9 @@
                 </ul>
             </nav>
 
-            <!-- Selector de Tema (Emerald / Blue) -->
             <div class="theme-selector">
-                <button class="theme-btn active" id="btn-emerald" onclick="document.body.className='theme-emerald'">Emerald</button>
-                <button class="theme-btn" id="btn-blue" onclick="document.body.className='theme-blue'">Blue</button>
+                <button class="theme-btn active" id="btn-emerald" onclick="setTheme('emerald')">Emerald</button>
+                <button class="theme-btn" id="btn-blue" onclick="setTheme('blue')">Blue</button>
             </div>
         </div>
     </header>
@@ -42,7 +41,7 @@
     <!-- CONTENIDO PRINCIPAL -->
     <main class="page-content container">
         
-        <!-- SECCIÓN 1: BIENVENIDA Y QUÉ ES LA PÁGINA -->
+        <!-- SECCIÓN 1: BIENVENIDA -->
         <section class="summary-card hero-welcome" style="margin-bottom: 2rem; text-align: center; padding: 3rem 2rem;">
             <span class="summary-label" style="letter-spacing: 1.5px;"><i class="fa-solid fa-chart-line"></i> Plataforma Educativa & Simulator Trading</span>
             <h1 style="font-size: 2.8rem; margin: 1rem 0; color: var(--text-main);">Tu Puerta de Entrada al Mundo de las Inversiones</h1>
@@ -59,7 +58,7 @@
             </div>
         </section>
 
-        <!-- SECCIÓN 2: ¿QUÉ SON LAS INVERSIONES Y CÓMO FUNCIONAN? -->
+        <!-- SECCIÓN 2: ¿QUÉ SON LAS INVERSIONES? -->
         <section class="market-section" style="padding: 2rem; margin-bottom: 2.5rem;">
             <h2 style="font-size: 1.8rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.8rem;">
                 <i class="fa-solid fa-wallet" style="color: var(--accent-color);"></i> ¿Qué son las Inversiones Financieras?
@@ -84,7 +83,7 @@
             </div>
         </section>
 
-        <!-- SECCIÓN 3: ¿CÓMO USAR ESTA PÁGINA? (PASO A PASO) -->
+        <!-- SECCIÓN 3: ¿CÓMO USAR LA PÁGINA? -->
         <section id="como-usar" class="activity-log-section" style="margin-bottom: 2.5rem; padding: 2rem;">
             <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem;">
                 <i class="fa-solid fa-circle-play" style="color: var(--accent-color);"></i> ¿Cómo usar Euro Trader FX?
@@ -95,7 +94,7 @@
                     <div>
                         <strong style="color: var(--text-main); font-size: 1.1rem;">Paso 1: Monitorea el Resumen del Portafolio</strong>
                         <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.3rem;">
-                            En la pestaña principal verás tu saldo total disponible, tus ganancias brutas en 24h y las órdenes de compra o venta abiertas.
+                            En la pestaña de Mercados verás tu saldo total disponible, el valor total acumulado y las órdenes procesadas.
                         </p>
                     </div>
                 </div>
@@ -104,7 +103,7 @@
                     <div>
                         <strong style="color: var(--text-main); font-size: 1.1rem;">Paso 2: Analiza la Tabla de Mercados en Vivo</strong>
                         <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.3rem;">
-                            Revisa el precio actual y el cambio porcentual. Los destellos en verde <span class="trend up">(+%)</span> o rojo <span class="trend down">(-%)</span> representan fluctuaciones en tiempo real.
+                            Revisa el precio actual y el cambio porcentual. Los cambios representarán las tendencias en tiempo real.
                         </p>
                     </div>
                 </div>
@@ -113,7 +112,7 @@
                     <div>
                         <strong style="color: var(--text-main); font-size: 1.1rem;">Paso 3: Ejecuta Operaciones de Trading</strong>
                         <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.3rem;">
-                            Usa los botones <span class="btn-trade buy" style="padding: 2px 6px; font-size: 0.8rem;">Comprar</span> si prevés que el activo subirá, o <span class="btn-trade sell" style="padding: 2px 6px; font-size: 0.8rem;">Vender</span> si proyectas una baja en su valor.
+                            Usa los botones <span class="btn-trade buy" style="padding: 2px 6px; font-size: 0.8rem;">Comprar</span> si prevés que el activo subirá, o <span class="btn-trade sell" style="padding: 2px 6px; font-size: 0.8rem;">Vender</span> para cerrar posiciones.
                         </p>
                     </div>
                 </div>
@@ -122,57 +121,16 @@
                     <div>
                         <strong style="color: var(--text-main); font-size: 1.1rem;">Paso 4: Consulta el Historial de Actividad</strong>
                         <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.3rem;">
-                            Cada orden que envíes se registrará inmediatamente en el historial con el tipo de operación, volumen negociado y rendimiento.
+                            Cada orden que envíes se registrará inmediatamente en el historial indicando el tipo de operación y la hora exacta.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN 4: VISTA PREVIA DE MERCADOS -->
-        <section class="market-section">
-            <div style="padding: 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-                <h3 style="font-size: 1.3rem;">Muestrario de Mercado en Tiempo Real</h3>
-                <a href="markets.html" class="trend up" style="text-decoration: none; font-size: 0.9rem;">Ver Lista Completa <i class="fa-solid fa-chevron-right"></i></a>
-            </div>
-
-            <div class="market-table-container">
-                <table class="market-table">
-                    <thead>
-                        <tr>
-                            <th>Par / Activo</th>
-                            <th>Precio</th>
-                            <th>Cambio (24h)</th>
-                            <th>Acciones Rápidas</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>EUR/USD</strong></td>
-                            <td class="flash-up">$1.0845</td>
-                            <td class="trend up">+0.42%</td>
-                            <td>
-                                <button class="btn-trade buy">Comprar</button>
-                                <button class="btn-trade sell">Vender</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><strong>BTC/USD</strong></td>
-                            <td class="flash-up">$64,320.00</td>
-                            <td class="trend up">+3.12%</td>
-                            <td>
-                                <button class="btn-trade buy">Comprar</button>
-                                <button class="btn-trade sell">Vender</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
     </main>
 
-    <!-- PIE DE PÁGINA -->
+    <!-- FOOTER -->
     <footer class="main-footer">
         <div class="container footer-content">
             <p>&copy; 2026 Euro Trader FX / Inversa S.A. Todos los derechos reservados.</p>
@@ -180,8 +138,6 @@
         </div>
     </footer>
 
-    <!-- Script JavaScript -->
     <script src="script.js"></script>
-
 </body>
 </html>
