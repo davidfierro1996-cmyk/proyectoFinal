@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Euro Trader FX - Bienvenido</title>
+    <title>Euro Trader FX - Inicio</title>
     
     <!-- Fuentes e Iconos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,118 +11,112 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- Hoja de estilos -->
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body class="theme-emerald">
 
-    <!-- ENCABEZADO -->
+    <!-- HEADER Y NAVEGACIÓN -->
     <header class="main-header">
         <div class="container navbar">
             <a href="index.html" class="logo">
-                Euro Trader<span>FX</span>
+                <i class="fa-solid fa-chart-line"></i> Euro Trader <span>FX</span>
             </a>
             
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html" class="active">Inicio</a></li>
-                    <li><a href="markets.html">Mercados</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                    <li><a href="markets.html"><i class="fa-solid fa-coins"></i> Mercados</a></li>
+                    <li><a href="nosotros.html"><i class="fa-solid fa-users"></i> Nosotros</a></li>
                 </ul>
             </nav>
 
             <div class="theme-selector">
-                <button class="theme-btn active" id="btn-emerald" onclick="setTheme('emerald')">Emerald</button>
-                <button class="theme-btn" id="btn-blue" onclick="setTheme('blue')">Blue</button>
+                <button id="btn-emerald" class="theme-btn active" onclick="setTheme('emerald')">Emerald</button>
+                <button id="btn-blue" class="theme-btn" onclick="setTheme('blue')">Blue</button>
             </div>
         </div>
     </header>
 
     <!-- CONTENIDO PRINCIPAL -->
-    <main class="page-content container">
+    <main class="container page-content">
         
-        <!-- SECCIÓN 1: BIENVENIDA -->
+        <!-- HERO / BIENVENIDA -->
         <section class="summary-card hero-welcome">
-            <span class="summary-label hero-label"><i class="fa-solid fa-chart-line"></i> Plataforma Educativa & Simulator Trading</span>
-            <h1 class="hero-title">Tu Puerta de Entrada al Mundo de las Inversiones</h1>
+            <span class="summary-label hero-label">
+                <i class="fa-solid fa-globe"></i> Plataforma de Simulación Financiera
+            </span>
+            <h1 class="hero-title">Operaciones Bursátiles en Tiempo Real</h1>
             <p class="hero-text">
-                <strong>Euro Trader FX</strong> es un entorno diseñado para que consultes cotizaciones en tiempo real, operes en el mercado de divisas y criptomonedas, y aprendas a gestionar tu capital con herramientas financieras profesionales.
+                Bienvenido a <strong>Euro Trader FX</strong>. Monitorea divisas, ejecuta transacciones de compra/venta simuladas y gestiona tu portafolio en una interfaz limpia, dinámica y moderna.
             </p>
             <div class="hero-buttons">
-                <a href="markets.html" class="btn-trade buy hero-btn">
-                    Explorar Mercados <i class="fa-solid fa-arrow-right"></i>
+                <a href="markets.html" class="theme-btn active hero-btn">
+                    <i class="fa-solid fa-chart-line"></i> Ir a Mercados
                 </a>
-                <a href="#como-usar" class="btn-trade sell hero-btn">
-                    ¿Cómo Usar la Plataforma?
+                <a href="nosotros.html" class="theme-btn hero-btn">
+                    <i class="fa-solid fa-circle-info"></i> Conocer el Equipo
                 </a>
             </div>
         </section>
 
-        <!-- SECCIÓN 2: ¿QUÉ SON LAS INVERSIONES? -->
-        <section class="market-section section-padding">
+        <!-- RESUMEN RÁPIDO -->
+        <div class="portfolio-summary">
+            <article class="summary-card">
+                <span class="summary-label"><i class="fa-solid fa-wallet"></i> Saldo Inicial Demo</span>
+                <h2>$10,000.00 USD</h2>
+                <p class="card-text">Capital ficticio asignado para poner a prueba tus estrategias de trading.</p>
+            </article>
+
+            <article class="summary-card">
+                <span class="summary-label"><i class="fa-solid fa-bolt"></i> Actualización Directa</span>
+                <h2>En Vivo</h2>
+                <p class="card-text">Precios y fluctuaciones simuladas directamente en el navegador.</p>
+            </article>
+
+            <article class="summary-card">
+                <span class="summary-label"><i class="fa-solid fa-shield-halved"></i> Entorno Seguro</span>
+                <h2>100% Simulado</h2>
+                <p class="card-text">Práctica libre de riesgos financieros reales ideal para aprendizaje.</p>
+            </article>
+        </div>
+
+        <!-- GUÍA DE USO -->
+        <section class="summary-card section-padding">
             <h2 class="section-title">
-                <i class="fa-solid fa-wallet icon-accent"></i> ¿Qué son las Inversiones Financieras?
-            </h2>
-            <p class="section-description">
-                Invertir consiste en colocar tu dinero en activos financieros (como divisas, acciones o criptomonedas) con el objetivo de generar una rentabilidad a lo largo del tiempo. En lugar de mantener el dinero estático, buscas aprovechar la fluctuación de los precios en el mercado global.
-            </p>
-
-            <div class="portfolio-summary no-margin">
-                <div class="summary-card">
-                    <h3 class="card-title"><i class="fa-solid fa-money-bill-transfer"></i> Divisas (Forex)</h3>
-                    <p class="card-text">El mercado más grande del mundo. Consiste en la compra y venta simultánea de monedas globales como el EUR/USD o USD/JPY.</p>
-                </div>
-                <div class="summary-card">
-                    <h3 class="card-title"><i class="fa-brands fa-bitcoin"></i> Criptomonedas</h3>
-                    <p class="card-text">Activos digitales descentralizados como Bitcoin que operan las 24 horas del día con alto potencial de variabilidad de precio.</p>
-                </div>
-                <div class="summary-card">
-                    <h3 class="card-title"><i class="fa-solid fa-shield-halved"></i> Gestión de Riesgo</h3>
-                    <p class="card-text">Toda inversión conlleva riesgos. Diversificar activos y controlar la toma de pérdidas es la clave para mantener un capital constante.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECCIÓN 3: ¿CÓMO USAR LA PÁGINA? -->
-        <section id="como-usar" class="activity-log-section section-padding">
-            <h2 class="section-title-large">
                 <i class="fa-solid fa-circle-play icon-accent"></i> ¿Cómo usar Euro Trader FX?
             </h2>
-
             <div class="log-container log-container-custom">
-                <div class="log-item buy log-item-padded">
+                <div class="log-item log-item-padded">
                     <div>
-                        <strong class="step-title">Paso 1: Monitorea el Resumen del Portafolio</strong>
-                        <p class="step-text">
-                            En la pestaña de Mercados verás tu saldo total disponible, el valor total acumulado y las órdenes procesadas.
-                        </p>
+                        <strong class="step-title">Paso 1: Selecciona tu Tema Preferido</strong>
+                        <p class="step-text">Utiliza el selector superior para cambiar la interfaz entre el tema Emerald o Blue.</p>
                     </div>
                 </div>
 
-                <div class="log-item buy log-item-padded">
+                <div class="log-item log-item-padded">
                     <div>
                         <strong class="step-title">Paso 2: Analiza la Tabla de Mercados en Vivo</strong>
-                        <p class="step-text">
-                            Revisa el precio actual y el cambio porcentual. Los cambios representarán las tendencias en tiempo real.
-                        </p>
+                        <p class="step-text">Revisa el precio actual y el cambio porcentual. Los cambios representarán las tendencias en tiempo real.</p>
                     </div>
                 </div>
 
-                <div class="log-item buy log-item-padded">
+                <div class="log-item log-item-padded">
                     <div>
                         <strong class="step-title">Paso 3: Ejecuta Operaciones de Trading</strong>
                         <p class="step-text">
-                            Usa los botones <span class="btn-trade buy inline-badge">Comprar</span> si prevés que el activo subirá, o <span class="btn-trade sell inline-badge">Vender</span> para cerrar posiciones.
+                            Usa los botones 
+                            <span class="inline-btn buy">Comprar</span> 
+                            si prevés que el activo subirá, o 
+                            <span class="inline-btn sell">Vender</span> 
+                            para cerrar posiciones.
                         </p>
                     </div>
                 </div>
 
-                <div class="log-item buy log-item-padded">
+                <div class="log-item log-item-padded">
                     <div>
                         <strong class="step-title">Paso 4: Consulta el Historial de Actividad</strong>
-                        <p class="step-text">
-                            Cada orden que envíes se registrará inmediatamente en el historial indicando el tipo de operación y la hora exacta.
-                        </p>
+                        <p class="step-text">Cada orden que envíes se registrará inmediatamente en el historial indicando el tipo de operación y la hora exacta.</p>
                     </div>
                 </div>
             </div>
@@ -132,9 +126,8 @@
 
     <!-- FOOTER -->
     <footer class="main-footer">
-        <div class="container footer-content">
-            <p>&copy; 2026 Euro Trader FX / Inversa S.A. Todos los derechos reservados.</p>
-            <p>Las inversiones en divisas y CFDs conllevan un alto nivel de riesgo para su capital.</p>
+        <div class="container">
+            <p>&copy; 2026 Euro Trader FX - Proyecto de Desarrollo Web</p>
         </div>
     </footer>
 

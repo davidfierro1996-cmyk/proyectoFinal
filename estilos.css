@@ -225,11 +225,6 @@ body {
     padding-bottom: 0.8rem;
 }
 
-.section-title-large {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-}
-
 .section-description {
     color: var(--text-muted);
     line-height: 1.7;
@@ -254,15 +249,34 @@ body {
     color: var(--text-muted);
     font-size: 0.9rem;
     margin-top: 0.3rem;
+    line-height: 1.8;
 }
 
-.inline-badge {
-    padding: 2px 6px;
-    font-size: 0.8rem;
+/* BOTONES ACREDITADOS INLINE */
+.inline-btn {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin: 0 2px;
+}
+
+.inline-btn.buy {
+    background-color: rgba(0, 230, 118, 0.15);
+    color: var(--up-color);
+    border: 1px solid var(--up-color);
+}
+
+.inline-btn.sell {
+    background-color: rgba(255, 82, 82, 0.15);
+    color: var(--down-color);
+    border: 1px solid var(--down-color);
 }
 
 /* ==========================================
-   MERCADOS (markets.html / Tabla de Precios)
+   MERCADOS (markets.html)
    ========================================== */
 .market-section {
     background: var(--bg-card);
@@ -422,40 +436,8 @@ body {
     line-height: 1.6;
 }
 
-.about-team-section,
 .about-mv-section {
     margin-bottom: 2.5rem;
-}
-
-.about-team-title {
-    font-size: 1.6rem;
-    margin-bottom: 1.2rem;
-}
-
-.team-card {
-    text-align: center;
-}
-
-.team-icon {
-    font-size: 2.5rem;
-    color: var(--accent-color);
-    margin-bottom: 0.5rem;
-}
-
-.team-name {
-    font-size: 1.3rem;
-    color: var(--text-main);
-}
-
-.team-role {
-    display: block;
-    margin-top: 0.3rem;
-}
-
-.team-desc {
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    margin-top: 0.8rem;
 }
 
 .mv-title {
@@ -470,9 +452,7 @@ body {
     font-size: 0.95rem;
 }
 
-/* ==========================================
-   FORMULARIO DE CONTACTO (NOSOTROS)
-   ========================================== */
+/* FORMULARIO DE CONTACTO */
 .contact-form {
     display: flex;
     flex-direction: column;

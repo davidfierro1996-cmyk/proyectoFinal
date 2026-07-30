@@ -3,153 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros - Euro Trader FX</title>
+    <title>Euro Trader FX - Nosotros</title>
     
-    <!-- Fuentes e Iconos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- Hoja de estilos -->
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body class="theme-emerald">
 
-    <!-- ENCABEZADO -->
     <header class="main-header">
         <div class="container navbar">
             <a href="index.html" class="logo">
-                Euro Trader<span>FX</span>
+                <i class="fa-solid fa-chart-line"></i> Euro Trader <span>FX</span>
             </a>
             
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="markets.html">Mercados</a></li>
-                    <li><a href="nosotros.html" class="active">Nosotros</a></li>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                    <li><a href="markets.html"><i class="fa-solid fa-coins"></i> Mercados</a></li>
+                    <li><a href="nosotros.html" class="active"><i class="fa-solid fa-users"></i> Nosotros</a></li>
                 </ul>
             </nav>
 
             <div class="theme-selector">
-                <button class="theme-btn active" id="btn-emerald" onclick="setTheme('emerald')">Emerald</button>
-                <button class="theme-btn" id="btn-blue" onclick="setTheme('blue')">Blue</button>
+                <button id="btn-emerald" class="theme-btn active" onclick="setTheme('emerald')">Emerald</button>
+                <button id="btn-blue" class="theme-btn" onclick="setTheme('blue')">Blue</button>
             </div>
         </div>
     </header>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="page-content container">
+    <main class="container page-content">
         
-        <!-- CABECERA DE NOSOTROS -->
+        <!-- SECCIÓN SOBRE EL PROYECTO -->
         <section class="summary-card about-hero">
-            <span class="summary-label hero-label"><i class="fa-solid fa-users"></i> Equipo de Desarrollo</span>
-            <h1 class="about-hero-title">Conoce a Euro Trader FX</h1>
+            <span class="summary-label hero-label"><i class="fa-solid fa-code"></i> Equipo de Desarrollo</span>
+            <h1 class="about-hero-title">Sobre Euro Trader FX</h1>
             <p class="about-hero-text">
-                Somos los desarrolladores detrás de esta plataforma web para simulación y análisis de inversiones financieras.
+                Este proyecto fue creado con el objetivo de simular una plataforma de trading funcional, aplicando tecnologías web modernas como HTML5, CSS3 dinámico con variables y manipulación del DOM mediante JavaScript.
             </p>
         </section>
 
-        <!-- INTEGRANTES DEL EQUIPO -->
-        <section class="activity-log-section about-team-section">
-            <h2 class="about-team-title">
-                <i class="fa-solid fa-code-branch icon-accent"></i> Desarrolladores de la Página
-            </h2>
-            
-            <div class="portfolio-summary no-margin">
-                <!-- Gael Jerez -->
-                <div class="summary-card team-card">
-                    <div class="team-icon"><i class="fa-solid fa-user-astronaut"></i></div>
-                    <h3 class="team-name">Gael Jerez</h3>
-                    <span class="summary-label team-role">Frontend & Estructura</span>
-                    <p class="team-desc">
-                        Creación, estructuración y despliegue de las páginas <code>index.html</code> y <code>nosotros.html</code>.
-                    </p>
-                </div>
-
-                <!-- Antony Fierro -->
-                <div class="summary-card team-card">
-                    <div class="team-icon"><i class="fa-solid fa-user-ninja"></i></div>
-                    <h3 class="team-name">Antony Fierro</h3>
-                    <span class="summary-label team-role">UI / UX & Mercados</span>
-                    <p class="team-desc">
-                        Diseño de interfaz con <code>estilos.css</code> y desarrollo de la sección <code>markets.html</code>.
-                    </p>
-                </div>
-
-                <!-- Andrés Vargas -->
-                <div class="summary-card team-card">
-                    <div class="team-icon"><i class="fa-solid fa-user-gear"></i></div>
-                    <h3 class="team-name">Andrés Vargas</h3>
-                    <span class="summary-label team-role">Lógica & Dinamismo</span>
-                    <p class="team-desc">
-                        Desarrollo de la lógica interactiva del sitio y funcionalidad JavaScript (<code>script.js</code>).
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- MISIÓN Y VISIÓN -->
-        <section class="portfolio-summary about-mv-section">
-            <div class="summary-card">
+        <!-- SECCIÓN DE MISIÓN Y VISIÓN -->
+        <div class="portfolio-summary about-mv-section">
+            <article class="summary-card">
                 <h3 class="mv-title"><i class="fa-solid fa-bullseye"></i> Nuestra Misión</h3>
-                <p class="mv-text">Democratizar el acceso a la simulación financiera mediante plataformas limpias, transparentes y rápidas.</p>
-            </div>
-            
-            <div class="summary-card">
+                <p class="mv-text">
+                    Proporcionar una interfaz limpia, veloz e intuitiva que permita a estudiantes e interesados comprender la dinámica de los mercados financieros y el intercambio de divisas sin riesgos.
+                </p>
+            </article>
+
+            <article class="summary-card">
                 <h3 class="mv-title"><i class="fa-solid fa-eye"></i> Nuestra Visión</h3>
-                <p class="mv-text">Ser una referencia de diseño web interactivo para plataformas educativas de inversión.</p>
-            </div>
+                <p class="mv-text">
+                    Consolidarse como una plantilla base de referencia académica para proyectos frontend interactivos, destacando por sus buenas prácticas de arquitectura y diseño accesible.
+                </p>
+            </article>
+        </div>
+
+        <!-- SECCIÓN DE CONTACTO / FORMULARIO -->
+        <section class="summary-card section-padding">
+            <h2 class="section-title"><i class="fa-solid fa-paper-plane icon-accent"></i> Contáctanos</h2>
+            <p class="section-description">
+                ¿Tienes alguna duda sobre la plataforma o te interesa colaborar con el equipo de desarrollo? Envíanos un mensaje.
+            </p>
+
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="nombre" class="form-label">Nombre Completo</label>
+                    <input type="text" id="nombre" class="form-input" placeholder="Ej. Gael Jerez" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" id="email" class="form-input" placeholder="correo@ejemplo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="asunto" class="form-label">Asunto</label>
+                    <select id="asunto" class="form-input">
+                        <option value="consulta">Consulta General</option>
+                        <option value="soporte">Soporte Técnico</option>
+                        <option value="propuesta">Propuesta de Proyecto</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea id="mensaje" class="form-input form-textarea" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+
+                <button type="submit" class="theme-btn active btn-submit">
+                    <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje
+                </button>
+            </form>
+            
+            <div id="form-response" class="form-response"></div>
         </section>
 
     </main>
 
-      <!-- SECCIÓN DE CONTACTO / CONSULTAS -->
-<section class="section-padding summary-card">
-    <h2 class="section-title"><i class="fa-solid fa-paper-plane icon-accent"></i> Contáctanos</h2>
-    <p class="section-description">
-        ¿Tienes alguna duda sobre la plataforma o te interesa colaborar con el equipo de desarrollo? Envíanos un mensaje.
-    </p>
-
-    <form id="contact-form" class="contact-form">
-        <div class="form-group">
-            <label for="nombre" class="form-label">Nombre Completo</label>
-            <input type="text" id="nombre" class="form-input" placeholder="Ej. Gael Jerez" required>
-        </div>
-
-        <div class="form-group">
-            <label for="email" class="form-label">Correo Electrónico</label>
-            <input type="email" id="email" class="form-input" placeholder="correo@ejemplo.com" required>
-        </div>
-
-        <div class="form-group">
-            <label for="asunto" class="form-label">Asunto</label>
-            <select id="asunto" class="form-input">
-                <option value="consulta">Consulta General</option>
-                <option value="soporte">Soporte Técnico</option>
-                <option value="propuesta">Propuesta de Proyecto</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label for="mensaje" class="form-label">Mensaje</label>
-            <textarea id="mensaje" class="form-input form-textarea" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
-        </div>
-
-        <button type="submit" class="theme-btn active btn-submit">
-            <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje
-        </button>
-    </form>
-    
-    <!-- Mensaje de confirmación -->
-    <div id="form-response" class="form-response"></div>
-</section>
-
-    <!-- FOOTER -->
     <footer class="main-footer">
-        <div class="container footer-content">
-            <p>&copy; 2026 Euro Trader FX / Inversa S.A. Todos los derechos reservados.</p>
-            <p>Proyecto desarrollado por Gael Jerez, Antony Fierro y Andrés Vargas.</p>
+        <div class="container">
+            <p>&copy; 2026 Euro Trader FX - Proyecto de Desarrollo Web</p>
         </div>
     </footer>
 
