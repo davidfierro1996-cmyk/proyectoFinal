@@ -20,7 +20,9 @@ body.theme-blue {
     --accent-hover: #2563eb;
 }
 
-/* RESET GENERAL */
+/* ==========================================
+   RESET & REGLAS GENERALES
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -40,6 +42,24 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.page-content {
+    padding: 2.5rem 0;
+    flex: 1;
+}
+
+.section-padding {
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.no-margin {
+    margin-bottom: 0 !important;
+}
+
+.icon-accent {
+    color: var(--accent-color);
 }
 
 /* ==========================================
@@ -91,7 +111,6 @@ body {
     color: var(--accent-color);
 }
 
-/* SELECTOR DE TEMA */
 .theme-selector {
     display: flex;
     gap: 0.5rem;
@@ -118,9 +137,51 @@ body {
 }
 
 /* ==========================================
-   ESTILOS DE LA PÁGINA INICIO (index.html)
+   TARJETAS Y GRIDS REUTILIZABLES
    ========================================== */
+.portfolio-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
 
+.summary-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 1.8rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.summary-card h2 {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    color: var(--text-main);
+}
+
+.summary-label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-title {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   INICIO (index.html)
+   ========================================== */
 .hero-welcome {
     margin-bottom: 2rem;
     text-align: center;
@@ -157,11 +218,6 @@ body {
     text-decoration: none;
 }
 
-.section-padding {
-    padding: 2rem;
-    margin-bottom: 2.5rem;
-}
-
 .section-title {
     font-size: 1.8rem;
     margin-bottom: 1rem;
@@ -174,30 +230,10 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.icon-accent {
-    color: var(--accent-color);
-}
-
 .section-description {
     color: var(--text-muted);
     line-height: 1.7;
     margin-bottom: 1.5rem;
-}
-
-.no-margin {
-    margin-bottom: 0;
-}
-
-.card-title {
-    color: var(--accent-color);
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.card-text {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    line-height: 1.5;
 }
 
 .log-container-custom {
@@ -226,43 +262,7 @@ body {
 }
 
 /* ==========================================
-   RESUMEN DEL PORTAFOLIO
-   ========================================== */
-.page-content {
-    padding: 2.5rem 0;
-    flex: 1;
-}
-
-.portfolio-summary {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.summary-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    padding: 1.8rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.summary-label {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.summary-card h2 {
-    font-size: 2rem;
-    margin-top: 0.5rem;
-    color: var(--text-main);
-}
-
-/* ==========================================
-   TABLA DE MERCADOS
+   MERCADOS (markets.html / Tabla de Precios)
    ========================================== */
 .market-section {
     background: var(--bg-card);
@@ -306,14 +306,8 @@ body {
 .trend.up { color: var(--up-color); font-weight: 600; }
 .trend.down { color: var(--down-color); font-weight: 600; }
 
-/* ANIMACIONES DE PRECIO EN VIVO */
-.flash-up {
-    animation: flashGreen 0.8s ease;
-}
-
-.flash-down {
-    animation: flashRed 0.8s ease;
-}
+.flash-up { animation: flashGreen 0.8s ease; }
+.flash-down { animation: flashRed 0.8s ease; }
 
 @keyframes flashGreen {
     0% { background-color: rgba(0, 230, 118, 0.25); }
@@ -325,7 +319,6 @@ body {
     100% { background-color: transparent; }
 }
 
-/* BOTONES DE TRADING */
 .btn-trade {
     padding: 0.5rem 1rem;
     border: none;
@@ -407,24 +400,9 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* FOOTER */
-.main-footer {
-    background-color: #070a10;
-    border-top: 1px solid var(--border-color);
-    padding: 1.5rem 0;
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-}
-
-@media (max-width: 768px) {
-    .navbar { flex-direction: column; gap: 1rem; }
-}
-
 /* ==========================================
-   ESTILOS DE LA PÁGINA NOSOTROS (nosotros.html)
+   NOSOTROS (nosotros.html)
    ========================================== */
-
 .about-hero {
     margin-bottom: 2rem;
     text-align: center;
@@ -444,7 +422,8 @@ body {
     line-height: 1.6;
 }
 
-.about-team-section {
+.about-team-section,
+.about-mv-section {
     margin-bottom: 2.5rem;
 }
 
@@ -479,10 +458,6 @@ body {
     margin-top: 0.8rem;
 }
 
-.about-mv-section {
-    margin-bottom: 2.5rem;
-}
-
 .mv-title {
     color: var(--accent-color);
     font-size: 1.3rem;
@@ -493,4 +468,23 @@ body {
     color: var(--text-muted);
     line-height: 1.6;
     font-size: 0.95rem;
+}
+
+/* ==========================================
+   FOOTER Y RESPONSIVE
+   ========================================== */
+.main-footer {
+    background-color: #070a10;
+    border-top: 1px solid var(--border-color);
+    padding: 1.5rem 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .navbar { 
+        flex-direction: column; 
+        gap: 1rem; 
+    }
 }
